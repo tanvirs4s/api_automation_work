@@ -6,7 +6,6 @@ When(/^I hit the signin api "([^"]*)" with valid "([^"]*)" and "([^"]*)"$/) do |
 end
 
 Then(/^i am able to see my profile details$/) do
-
   ap @response
 
 end
