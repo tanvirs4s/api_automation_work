@@ -9,7 +9,7 @@ When(/^I hit the add buyer api "([^"]*)" with "([^"]*)", "([^"]*)", "([^"]*)", "
 end
 
 Then(/^Buyer should be created and visible in Existing buyer List$/) do
-  @response_existing_buyer = S4sClient.get('/api/v3/supplier/buyers.json',query: {_keys:'_,full_name,user(u),u.email'}, headers: {'AUTHORIZATION-TOKEN' => @token},)
+  @response_existing_buyer = S4sClient.get('/api/v3/supplier/buyers.json',query: {_keys:'_,email,full_name'}, headers: {'AUTHORIZATION-TOKEN' => @token},)
   expect(@response_existing_buyer['data'].collect {|data| data['id']}).to include @customer_id
   ap @response_existing_buyer
 
