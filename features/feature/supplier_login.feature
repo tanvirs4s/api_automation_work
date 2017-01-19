@@ -4,5 +4,5 @@ Feature: Login as Supplier
   So I can see my profile details
 
   Scenario: Successful Supplier Login
-    When I hit the signin api "http://staging.source4style.com/signin" with valid "Email" and "Password"
+    When I hit the signin api "https://staging.source4style.com/signin" with valid "Email" and "Password"
     Then i am able to see my profile details

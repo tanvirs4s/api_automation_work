@@ -5,5 +5,8 @@ class S4sClient
 
   include HTTParty
 
-  base_uri 'http://staging.source4style.com:8081'
+  base_uri 'https://staging.source4style.com/'
+  default_options[:verify] = false
+
 end
+
